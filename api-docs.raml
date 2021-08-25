@@ -1,0 +1,30 @@
+#%RAML 1.0
+title: Books REST API
+version: 1.0
+baseUri: http://localhost:8080
+
+type:
+  Book:
+    type: object
+    properties:
+      id:
+        type: number
+        readOnly: true
+      title:
+        type: string
+      genre:
+        type: string
+      publicationYear:
+        type: number
+        required: false
+
+/books:
+  displayName: Books
+  get:
+    description: Listar todos los libros
+    responses:
+      200:
+        body:
+          application/json:
+            type: array
+            items: Book
