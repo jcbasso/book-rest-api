@@ -1,5 +1,0 @@
-com/bbva/practitioner/bookrestapi/models/Book.class
-com/bbva/practitioner/bookrestapi/BookRestApiApplication.class
-com/bbva/practitioner/bookrestapi/PreloadDatabase.class
-com/bbva/practitioner/bookrestapi/controllers/BookController.class
-com/bbva/practitioner/bookrestapi/repositories/BookRepository.class

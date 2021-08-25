@@ -28,3 +28,34 @@ type:
           application/json:
             type: array
             items: Book
+  post:
+    description: Add a new book
+    body:
+      application/json: Book
+    responses:
+      201:
+        body:
+          application/json: Book
+  /{bookId}:
+    get:
+      description: Get information about a book
+      responses:
+        200:
+          body:
+            application/json: Book
+        404:
+          description: Book not found
+    put:
+      description: Update a book
+      body:
+        application/json: Book
+      responses:
+        200:
+          body:
+            application/json: Book
+        404:
+          description: Book not found
+    delete:
+      description: Delete a book
+      responses:
+        204:

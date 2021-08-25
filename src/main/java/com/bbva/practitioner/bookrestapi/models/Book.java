@@ -1,11 +1,12 @@
 package com.bbva.practitioner.bookrestapi.models;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+
+import javax.persistence.*;
 
 @Entity
+@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
 public class Book {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -15,12 +16,16 @@ public class Book {
     private String genre;
     private Integer publicationYear;
 
+    @ManyToOne
+    private Author author;
+
     public Book() {}
 
-    public Book(String title, String genre, Integer publicationYear) {
+    public Book(String title, String genre, Integer publicationYear, Author author) {
         this.title = title;
         this.genre = genre;
         this.publicationYear = publicationYear;
+        this.author = author;
     }
 
     public Integer getId() {
