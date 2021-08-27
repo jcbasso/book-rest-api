@@ -3,7 +3,7 @@ The following was discovered as part of building this project:
 
 * The original package name 'com.bbva.practitioner.book-rest-api' is invalid and this project uses 'com.bbva.practitioner.bookrestapi' instead.
 
-# Getting Started
+# GIL EL QUE LEE
 
 ### Reference Documentation
 For further reference, please consider the following sections:
